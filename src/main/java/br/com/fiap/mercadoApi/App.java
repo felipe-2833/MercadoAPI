@@ -9,13 +9,22 @@ import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 
 @SpringBootApplication
+@EnableCaching
+@OpenAPIDefinition(
+    info = @Info(
+        title = "Mercado API",
+        version = "v1",
+        description = "API do projeto mercado",
+        contact = @Contact(
+            name = "Felipe Fidelix",
+            email = "felipe.elucidator@gmail.com"
+        )
+    )
+)
 public class App {
 
-	@SpringBootApplication
-	@EnableCaching
-	@OpenAPIDefinition(info = @Info(title = "Mercado API", version = "v1", description = "API do projeto marcado", contact = @Contact(name = "Felipe Fidelix", email = "felipe.elucidator@gmail.com")))
-	public static void main(String[] args) {
-		SpringApplication.run(App.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
 
 }
