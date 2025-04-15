@@ -12,26 +12,25 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Item {
-
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Nome é obrigatório")
+    @NotBlank(message = "Campo é obrigatório")
     private String nome;
 
-    @NotNull(message = "Tipo é obrigatório")
+    @NotNull(message = "Campo é obrigatório")
     @Enumerated(EnumType.STRING)
     private ItemTipo tipo;
 
-    @NotNull(message = "Raridade é obrigatória")
+    @NotNull(message = "Campo é obrigatória")
     @Enumerated(EnumType.STRING)
     private ItemRaridade raridade;
 
-    @NotNull(message = "Preço é obrigatório")
+    @NotNull(message = "Campo é obrigatório")
     @Positive(message = "Preço deve ser maior que zero")
     private BigDecimal preco;
 
-    @NotNull(message = "Dono é obrigatório")
+    @NotNull(message = "Campo é obrigatório")
     @ManyToOne
     private Personagem dono;
 }

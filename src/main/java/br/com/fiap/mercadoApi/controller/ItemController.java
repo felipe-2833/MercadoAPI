@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @RestController
-@RequestMapping("Item")
+@RequestMapping("item")
 @Slf4j
 public class ItemController {
 
@@ -51,7 +51,7 @@ public class ItemController {
 
     @GetMapping
     public Page<Item> index(ItemFilter filter,
-            @PageableDefault(size = 10, sort = "name", direction = Direction.ASC) Pageable pageable) {
+            @PageableDefault(size = 10, sort = "nome", direction = Direction.ASC) Pageable pageable) {
         var specification = ItemSpecification.withFilters(filter);
         return repository.findAll(specification, pageable);
     }

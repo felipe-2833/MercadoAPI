@@ -28,7 +28,7 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("Personagem")
+@RequestMapping("personagem")
 @Slf4j
 public class PersonagemController {
 
