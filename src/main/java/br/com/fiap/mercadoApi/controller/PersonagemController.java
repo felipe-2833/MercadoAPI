@@ -52,7 +52,7 @@ public class PersonagemController {
             @ApiResponse(responseCode = "400", description = "Falha na validação")
     }, tags = "personagem", summary = "Adicionar personagem", description = "Adicionar personagem")
     public Personagem create(@RequestBody @Valid Personagem personagem) {
-        log.info("Cadastrando animes " + personagem.getNome());
+        log.info("Cadastrando personagem " + personagem.getNome());
         return repository.save(personagem);
     }
 
